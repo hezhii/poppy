@@ -1,10 +1,34 @@
 {
   "name": "poppy",
-  "version": "1.0.0",
-  "description": "Theme for Ghost",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Beautiful and Enticing theme form Ghost.",
+  "version": "0.0.0",
+  "engines": {
+    "ghost": ">=1.2.0"
   },
-  "author": "biu",
-  "license": "MIT"
+  "license": "MIT",
+  "author": {
+    "name": "biu",
+    "email": "hezhou920@gmail.com",
+    "url": "http://www.whezh.com"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Beautiful",
+      "Enticing"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hezhii/poppy.git"
+  },
+  "bugs": "https://github.com/hezhii/poppy/issues",
+  "contributors": "https://github.com/hezhii/poppy/graphs/contributors",
+  "config": {
+    "posts_per_page": 25
+  }
 }
