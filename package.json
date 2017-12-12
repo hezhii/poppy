@@ -27,7 +27,13 @@
     "url": "https://github.com/hezhii/poppy.git"
   },
   "bugs": "https://github.com/hezhii/poppy/issues",
-  "contributors": "https://github.com/hezhii/poppy/graphs/contributors",
+  "contributors": [
+    {
+      "name": "biu",
+      "email": "hezhou920@gmail.com",
+      "url": "https://github.com/hezhii/poppy/graphs/contributors"
+    }
+  ],
   "config": {
     "posts_per_page": 25
   }
