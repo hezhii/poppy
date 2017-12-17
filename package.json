@@ -5,6 +5,9 @@
   "engines": {
     "ghost": ">=1.2.0"
   },
+  "scripts": {
+    "dev": "gulp sass:watch"
+  },
   "license": "MIT",
   "author": {
     "name": "biu",

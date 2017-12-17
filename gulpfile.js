@@ -6,3 +6,7 @@ gulp.task('sass', () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./assets/dist'));
 });
+
+gulp.task('sass:watch', function () {
+  gulp.watch('./assets/scss/*.scss', ['sass']);
+});
