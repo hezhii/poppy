@@ -3,6 +3,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const cssnano = require('gulp-cssnano');
+const concat = require('gulp-concat');
 
 gulp.task('sass', () => {
   return gulp.src('./assets/scss/*.scss')
@@ -17,6 +18,7 @@ gulp.task('sass', () => {
     }))
     .pipe(sass().on('error', sass.logError))
     .pipe(cssnano())
+    .pipe(concat('poppy.min.css'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./assets/dist'));
 });
@@ -24,3 +26,5 @@ gulp.task('sass', () => {
 gulp.task('sass:watch', function () {
   gulp.watch('./assets/scss/*.scss', ['sass']);
 });
+
+gulp.task('default', ['sass', 'sass:watch']);
