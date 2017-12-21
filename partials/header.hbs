@@ -1,6 +1,12 @@
-<header class="site-header clearfix">
-  <a href="/" class="logo">
-    <img src="{{@blog.logo}}" alt="logo">
-    <span>{{@blog.title}}</span>
-  </a>
+<header class="site-header">
+  <nav class="navbar">
+    <div class="container clearfix">
+      <a href="/" class="logo">
+        {{#if @blog.logo}}
+          <img src="{{@blog.logo}}" alt="logo">
+        {{/if}}
+      </a>
+      {{navigation}}
+    </div>
+  </nav>
 </header>

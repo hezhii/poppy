@@ -8,8 +8,10 @@ const concat = require('gulp-concat');
 // Need to install LiveReload extension in the browser
 const livereload = require('gulp-livereload');
 
+const SOURCE_PATH = './assets/scss/**/*.scss';
+
 gulp.task('sass', () => {
-  return gulp.src('./assets/scss/*.scss')
+  return gulp.src(SOURCE_PATH)
     .pipe(sourcemaps.init())
     .pipe(autoprefixer({
       browsers: [
@@ -29,7 +31,7 @@ gulp.task('sass', () => {
 
 gulp.task('sass:watch', function () {
   livereload.listen();
-  gulp.watch('./assets/scss/*.scss', ['sass']);
+  gulp.watch(SOURCE_PATH, ['sass']);
 });
 
 gulp.task('default', ['sass', 'sass:watch']);
