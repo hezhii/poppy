@@ -69,6 +69,22 @@ a {
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: .5em;
+  font-weight: 500;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
 .container {
   padding: 0 $padding-md;
   margin: 0 auto;
@@ -94,6 +110,17 @@ a {
 
 /* 2. Header
 /* ---------------------------------------------------------- */
+.site-header {
+}
+
+.navbar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  background-color: transparent;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
 .logo {
   float: left;
   height: $header-height;
@@ -120,7 +147,7 @@ a {
     border-top: 2px solid transparent;
     cursor: pointer;
     transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), padding 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
-    color: $heading-color;
+    color: #fff;
     & > a {
       display: block;
       color: inherit;
@@ -131,4 +158,30 @@ a {
       color: $primary-6;
     }
   }
+}
+
+/* 3. Cover
+/* ---------------------------------------------------------- */
+.cover {
+  text-align: center;
+  background: #090a0b no-repeat center/cover;
+}
+
+.cover-content {
+  color: #fff;
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 3.8rem;
+  font-weight: 700;
+}
+
+.site-description {
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: .5px;
+  opacity: .8;
 }
