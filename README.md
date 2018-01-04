@@ -1,3 +1,3 @@
 # Poppy
 
-Beautiful and Enticing theme form Ghost.
+Beautiful and Enticing theme for Ghost.
