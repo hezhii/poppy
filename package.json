@@ -6,8 +6,8 @@
     "ghost": ">=1.2.0"
   },
   "scripts": {
-    "build": "gulp sass",
-    "dev": "gulp"
+    "build": "gulp",
+    "dev": "gulp dev"
   },
   "license": "MIT",
   "author": {
@@ -42,11 +42,12 @@
     "posts_per_page": 25
   },
   "devDependencies": {
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
-    "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1"
   }
