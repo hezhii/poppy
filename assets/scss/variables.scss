@@ -1,0 +1,35 @@
+$primary-1: #fff2e8;
+$primary-2: #ffd8bf;
+$primary-3: #ffbb96;
+$primary-4: #ff9c6e;
+$primary-5: #ff7a45;
+$primary-6: #fa541c;
+$primary-7: #d4380d;
+$primary-8: #ad2102;
+$primary-9: #871400;
+$primary-10: #610b00;
+
+$body-background: #fff;
+
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$code-family: Consolas, Menlo, Courier, monospace;
+$heading-color: rgba(#000, .85);
+$text-color: rgba(#000, .65);
+$font-size-base: 1.4rem;
+$line-height-base: 1.5;
+
+// LINK
+$link-color: $primary-6;
+$link-hover-color: $primary-5;
+$link-active-color: $primary-7;
+$link-decoration: none;
+$link-hover-decoration: none;
+
+// Vertical paddings
+$padding-lg: 24px; // containers
+$padding-md: 16px; // small containers and buttons
+$padding-sm: 12px; // items
+$padding-xs: 8px; // small items
+
+// Disabled states
+$disabled-color: rgba(#000, .25);
