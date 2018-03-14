@@ -1,0 +1,7 @@
+<ul class="navbar-nav mr-auto">
+  {{#foreach navigation}}
+    <li class="nav-item {{#if current}}active{{/if}}">
+      <a href="{{url absolute="true"}}" class="nav-link">{{label}}</a>
+    </li>
+  {{/foreach}}
+</ul>

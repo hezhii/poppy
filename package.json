@@ -6,7 +6,8 @@
     "ghost": ">=1.2.0"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack -w"
   },
   "license": "MIT",
   "author": {
