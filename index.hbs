@@ -1,5 +1,13 @@
 {{!< default}}
 
-<header>
+<header class="site-header">
   {{> "site-nav"}}
+  <div class="cover"
+    {{#if @blog.cover_image}} style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}"
+  >
+    <img class="logo" src="https://spreadprivacy.com/content/images/2017/08/Dax_288x288_wide.png"
+         alt="DuckDuckGo Blog">
+    <h1>{{@blog.title}}</h1>
+    <h2>{{@blog.description}}</h2>
+  </div>
 </header>

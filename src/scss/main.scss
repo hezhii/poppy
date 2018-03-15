@@ -1,7 +1,22 @@
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
 
-.navbar-container {
-  height: 50px;
-  background-color: transparent;
+#nav {
+  transition: background 0.3s;
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+  background-color: #60a5da;
+  background-size: cover;
+  color: #fff;
+  .logo {
+    max-height: 144px;
+    margin-bottom: 2rem;
+  }
 }
