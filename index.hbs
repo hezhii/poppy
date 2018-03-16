@@ -11,3 +11,12 @@
     <h2>{{@blog.description}}</h2>
   </div>
 </header>
+<main class="site-main">
+  <div class="container">
+    <div class="post-feed">
+      {{#foreach posts}}
+        {{> "post-card"}}
+      {{/foreach}}
+    </div>
+  </div>
+</main>

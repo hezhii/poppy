@@ -39,7 +39,7 @@
     }
   ],
   "config": {
-    "posts_per_page": 25
+    "posts_per_page": 6
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
