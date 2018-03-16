@@ -2,7 +2,10 @@
 @import "~bootstrap/scss/bootstrap";
 
 #nav {
-  transition: background 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
+  &.bg-light {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 12px 0 rgba(0, 0, 0, 0.12);
+  }
 }
 
 .cover {
@@ -39,7 +42,7 @@
   background: #fff center center;
   background-size: cover;
   border-radius: 5px;
-  box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06), 1px 3px 8px rgba(39, 44, 49, 0.03);
   transition: all 0.5s ease;
   &:hover {
     box-shadow: 0 0 1px rgba(39, 44, 49, 0.10), 0 3px 16px rgba(39, 44, 49, 0.07);

@@ -25,7 +25,7 @@ function throttle (fn, delay) {
 }
 
 $(function ($) {
-  $(window).scroll(throttle(function () {
+  function changeNavBarStyle () {
     const $nav = $('#nav')
     const $btn = $('#searchBtn')
     if ($(document).scrollTop() > 0) {
@@ -39,5 +39,8 @@ $(function ($) {
       $btn.removeClass('btn-outline-primary')
       $btn.addClass('btn-outline-light')
     }
-  }, 300))
+  }
+
+  changeNavBarStyle()
+  $(window).scroll(throttle(changeNavBarStyle, 200))
 })
