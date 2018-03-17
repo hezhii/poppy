@@ -6,7 +6,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: {
-    vendor: ['jquery', 'popper.js', 'bootstrap'],
+    vendor: ['jquery', 'popper.js', 'bootstrap', 'smooth-scroll'],
     poppy: './src/js/index.js'
   },
   output: {
