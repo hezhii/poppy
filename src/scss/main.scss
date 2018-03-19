@@ -165,3 +165,22 @@
   transition: all 0.3s;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 2px 0px -2px rgba(0, 0, 0, 0.2);
 }
+
+.post-pagination {
+  position: relative;
+  padding: 0 20px;
+  text-align: center;
+  color: $primary;
+
+  .newer-posts {
+    float: left;
+  }
+
+  .older-posts {
+    float: right;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
