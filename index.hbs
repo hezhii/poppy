@@ -21,3 +21,23 @@
     {{pagination}}
   </div>
 </main>
+{{#if @labs.subscribers}}
+  <div class="subscribe">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h4>订阅{{@blog.title}}</h4>
+          <p>我会将最新的博客动态发送到您的邮箱中</p>
+        </div>
+        <div class="col-sm-6">
+          {{subscribe_form
+              form_class="form-inline"
+              input_class="form-control mr-4"
+              button_class="btn btn-outline-light"
+              placeholder="youremail@example.com"
+          }}
+        </div>
+      </div>
+    </div>
+  </div>
+{{/if}}
