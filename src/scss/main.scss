@@ -188,5 +188,43 @@
 .subscribe {
   background-color: #597ef7;
   padding: 28px 0;
-  color: #ffffff;
+  color: #fff;
+}
+
+.site-footer {
+  font-size: 14px;
+  background-color: #000;
+  color: #fff;
+
+  .footer-wrap {
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+    .row {
+      width: 100%;
+      max-width: 1200px;
+      padding: 86px 24px 93px 24px;
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  .foot-center {
+    display: inline-block;
+    text-align: left;
+
+    h4 {
+      font-size: 1rem;
+      margin: 0 auto 1.5rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    &:hover {
+      color: $link-hover-color
+    }
+  }
 }
