@@ -9,15 +9,16 @@
 }
 
 .cover {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10rem;
-  padding-bottom: 2rem;
-  background-color: $primary;
   background-size: cover;
-  color: #fff;
+  text-align: center;
+  color: #ffffff;
+  background: $primary center/cover;
+
+  .container {
+    padding-top: 250px;
+    padding-bottom: 150px;
+  }
+
   .logo {
     max-height: 144px;
     margin-bottom: 2rem;
