@@ -1,19 +1,17 @@
 {{!< default}}
 
-<header class="site-header">
-  {{> "site-nav"}}
-  <div class="cover"
-    {{#if @blog.cover_image}} style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}"
-  >
-    <div class="container">
-      <h1>{{@blog.title}}</h1>
-      <h2>{{@blog.description}}</h2>
-    </div>
-  </div>
-  </div>
-</header>
-<main class="site-main">
+<div class="cover"
+  {{#if @blog.cover_image}} style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}"
+>
   <div class="container">
+    <img class="avatar" src="/content/images/2018/04/avatar.jpg"
+         alt="博主头像">
+    <h1 class="title">{{@blog.title}}</h1>
+    <h2 class="description">{{@blog.description}}</h2>
+  </div>
+</div>
+<main class="site-main">
+  <div class="inner">
     <div class="post-feed">
       {{#foreach posts}}
         {{> "post-card"}}
@@ -22,23 +20,3 @@
     {{pagination}}
   </div>
 </main>
-{{#if @labs.subscribers}}
-  <div class="subscribe">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <h4>订阅{{@blog.title}}</h4>
-          <p>我会将最新的博客动态发送到您的邮箱中</p>
-        </div>
-        <div class="col-sm-6">
-          {{subscribe_form
-              form_class="form-inline"
-              input_class="form-control mr-4"
-              button_class="btn btn-outline-light"
-              placeholder="youremail@example.com"
-          }}
-        </div>
-      </div>
-    </div>
-  </div>
-{{/if}}

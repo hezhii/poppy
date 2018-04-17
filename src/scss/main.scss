@@ -1,38 +1,69 @@
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
+@import "functions";
 
-#nav {
-  transition: background 0.3s, box-shadow 0.3s;
-  &.bg-light {
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 12px 0 rgba(0, 0, 0, 0.12);
-  }
+/* 全局样式
+/* ---------------------------------------------------------- */
+body {
+  -webkit-font-smoothing: antialiased;
 }
 
+/* 页面顶部背景
+/* ---------------------------------------------------------- */
 .cover {
-  background-size: cover;
   text-align: center;
   color: #ffffff;
-  background: $primary center/cover;
+  background: center/cover;
 
   .container {
-    padding-top: 250px;
-    padding-bottom: 150px;
+    padding: px2rem(150px) px2rem(60px);
   }
 
-  .logo {
+  .avatar {
     max-height: 144px;
     margin-bottom: 2rem;
+    border-radius: 50%;
+  }
+
+  .title {
+    margin: 0;
+    padding: 0;
+    font-size: px2rem(38px);
+    font-weight: 700;
+  }
+
+  .description {
+    z-index: 10;
+    margin: 0;
+    padding: 5px 0;
+    font-size: px2rem(22px);
+    font-weight: 300;
+    letter-spacing: .5px;
+    opacity: .8;
   }
 }
 
+/* 页面主体
+/* ---------------------------------------------------------- */
 .site-main {
-  padding: 4rem 0;
+  position: relative;
+  padding: 0 4vw;
 }
 
+.inner {
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%;
+}
+
+/* 文章卡片列表
+/* ---------------------------------------------------------- */
 .post-feed {
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -20px;
+  padding: 40px 0 0 0;
 }
 
 .post-card {
@@ -152,21 +183,15 @@
   }
 }
 
-#backTop {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  right: 32px;
-  bottom: 32px;
-  width: 42px;
-  height: 42px;
-  background: $primary;
-  border-radius: 50%;
-  transition: all 0.3s;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 2px 0px -2px rgba(0, 0, 0, 0.2);
+@media (min-width: 900px) {
+  .post-feed {
+    margin-top: -70px;
+    padding-top: 0;
+  }
 }
 
+/* 文章分页
+/* ---------------------------------------------------------- */
 .post-pagination {
   position: relative;
   padding: 0 20px;
@@ -186,46 +211,19 @@
   }
 }
 
-.subscribe {
-  background-color: #597ef7;
-  padding: 28px 0;
-  color: #fff;
-}
-
-.site-footer {
-  font-size: 14px;
-  background-color: #000;
-  color: #fff;
-
-  .footer-wrap {
-    width: 100%;
-    padding: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-
-    .row {
-      width: 100%;
-      max-width: 1200px;
-      padding: 86px 24px 93px 24px;
-      margin: auto;
-      text-align: center;
-    }
-  }
-
-  .foot-center {
-    display: inline-block;
-    text-align: left;
-
-    h4 {
-      font-size: 1rem;
-      margin: 0 auto 1.5rem;
-    }
-  }
-
-  a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.9);
-    &:hover {
-      color: $link-hover-color
-    }
-  }
+/* 回到顶部按钮
+/* ---------------------------------------------------------- */
+#backTop {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  width: 42px;
+  height: 42px;
+  background: $primary;
+  border-radius: 50%;
+  transition: all 0.3s;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 2px 0px -2px rgba(0, 0, 0, 0.2);
 }

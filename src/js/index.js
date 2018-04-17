@@ -2,6 +2,13 @@ import 'bootstrap'
 import '../scss/main.scss'
 import SmoothScroll from 'smooth-scroll'
 
+/**
+ * 节流函数
+ *
+ * @param fn
+ * @param delay
+ * @returns {Function}
+ */
 function throttle (fn, delay) {
   let timer = null
   let preTime = Date.now()
@@ -26,27 +33,15 @@ function throttle (fn, delay) {
 }
 
 $(function ($) {
-  new SmoothScroll('#backTop')
-
-  function changeNavBarStyle () {
-    const $nav = $('#nav')
-    const $btn = $('#searchBtn')
+  const doAfterScroll = () => {
     const $backTop = $('#backTop')
     if ($(document).scrollTop() > 0) {
-      $nav.removeClass('navbar-dark')
-      $nav.addClass('bg-light')
-      $btn.removeClass('btn-outline-light')
-      $btn.addClass('btn-outline-primary')
       $backTop.css('display', 'flex')
     } else {
-      $nav.removeClass('bg-light')
-      $nav.addClass('navbar-dark')
-      $btn.removeClass('btn-outline-primary')
-      $btn.addClass('btn-outline-light')
       $backTop.css('display', 'none')
     }
   }
 
-  changeNavBarStyle()
-  $(window).scroll(throttle(changeNavBarStyle, 200))
+  new SmoothScroll('#backTop')
+  $(window).scroll(throttle(doAfterScroll, 200))
 })

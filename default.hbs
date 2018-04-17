@@ -11,43 +11,25 @@
   {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-{{{body}}}
-<footer class="site-footer">
-  <div class="footer-wrap">
+<header class="site-header">
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="foot-center">
-            <h4>友情链接</h4>
-            <p>
-              <a href="http://www.yanfangxiong.com/" target="_blank" rel="noopener noreferrer">严方雄的空间</a>
-            </p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="foot-center">
-            <h4>标签</h4>
-            <div class="tag-cloud">
-              {{#get "tags" limit="10" include="count.posts" order="count.posts desc" }}
-                {{#foreach tags}}
-                  <a href="/tag/{{slug}}" class="tag-item">{{name}} ({{count.posts}})</a>
-                {{/foreach}}
-              {{/get}}
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="foot-center">
-            <h4>关于</h4>
-            <p>沉淀知识，分享生活。<br />这是我的个人博客，记录平时遇到的技术问题和学习到新的知识，分享自己的一些生活、感悟。欢迎大家订阅我的博客，获取第一手动态，共同交流进步。</p>
-          </div>
-        </div>
+      <a href="/" class="navbar-brand">
+        {{#if @blog.logo}}
+          <img src="{{@blog.logo}}" alt="logo" width="40" height="40">
+        {{/if}}
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="显示隐藏导航条">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarNav" class="collapse navbar-collapse">
+        {{navigation}}
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-  </div>
-</footer>
+  </nav>
+</header>
+{{{body}}}
 <a href="#" id="backTop">
   {{> "icons/up"}}
 </a>
