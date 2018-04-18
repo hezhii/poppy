@@ -244,7 +244,7 @@ body {
   .newsletter {
     position: relative;
     padding: 32px;
-    background-color: #c2e8f9;
+    background-color: lighten($primary, 25%);
     .close {
       position: absolute;
       top: 5px;
