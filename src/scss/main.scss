@@ -236,3 +236,22 @@ body {
   transition: all 0.3s;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 2px 0px -2px rgba(0, 0, 0, 0.2);
 }
+
+/* 订阅
+/* ---------------------------------------------------------- */
+.newsletter-box {
+  margin-top: 40px;
+  .newsletter {
+    padding: 32px;
+    background-color: #c2e8f9;
+  }
+  .header {
+    h2 {
+      font-size: px2rem(26px);
+      margin-bottom: px2rem(20px);
+    }
+    p {
+      font-size: px2rem(18px);
+    }
+  }
+}
