@@ -242,16 +242,26 @@ body {
 .newsletter-box {
   margin-top: 40px;
   .newsletter {
+    position: relative;
     padding: 32px;
     background-color: #c2e8f9;
+    .close {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+    }
   }
-  .header {
-    h2 {
-      font-size: px2rem(26px);
-      margin-bottom: px2rem(20px);
-    }
-    p {
-      font-size: px2rem(18px);
-    }
+
+  .newsletter-title {
+    font-size: px2rem(26px);
+    margin-bottom: px2rem(20px);
+  }
+
+  .newsletter-description {
+    font-size: px2rem(18px);
+  }
+
+  .newsletter-form {
+    margin-top: 16px;
   }
 }

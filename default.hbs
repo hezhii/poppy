@@ -35,18 +35,22 @@
     <div class="inner">
       <div class="newsletter">
         <div class="row">
-          <div class="col-sm-6 header">
-            <h2>订阅{{@blog.title}}</h2>
-            <p>让我将最新、最棒的内容直接投递到您的邮箱。</p>
+          <div class="col-sm-6">
+            <h2 class="newsletter-title">订阅{{@blog.title}}</h2>
+            <p class="newsletter-description">让我将最新、最棒的内容直接投递到您的邮箱。</p>
           </div>
           <div class="col-sm-6">
             {{subscribe_form
+                form_class="newsletter-form"
                 input_class="form-control"
                 button_class="btn btn-outline-primary"
                 placeholder="youremail@example.com"
             }}
           </div>
         </div>
+        <button id="newsletterHide" type="button" class="close">
+          <span aria-hidden="true">×</span>
+        </button>
       </div>
     </div>
   </div>

@@ -41,7 +41,15 @@ $(function ($) {
       $backTop.css('display', 'none')
     }
   }
-
   new SmoothScroll('#backTop')
   $(window).scroll(throttle(doAfterScroll, 200))
+
+  const hideNewsletter = localStorage.getItem('newsletterHide')
+  if (hideNewsletter) {
+    $('.newsletter-box').hide()
+  }
+  $('#newsletterHide').click(() => {
+    $('.newsletter-box').hide()
+    localStorage.setItem('newsletterHide', true)
+  })
 })
