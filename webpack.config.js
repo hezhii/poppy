@@ -1,8 +1,8 @@
-const webpack = require('webpack');
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const autoprefixer = require('autoprefixer');
+const webpack = require('webpack')
+const path = require('path')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const autoprefixer = require('autoprefixer')
 
 module.exports = {
   entry: {
@@ -16,6 +16,22 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 8192,
+          name: 'images/[name].[ext]'
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 8192,
+          name: 'fonts/[name].[ext]'
+        }
+      },
+      {
         test: /\.js$/,
         include: path.resolve(__dirname, 'src'),
         use: ['babel-loader?cacheDirectory=true']
@@ -25,7 +41,7 @@ module.exports = {
           fallback: 'style-loader',
           use: [{
             loader: 'css-loader',
-            options: { minimize: true }
+            options: {minimize: true}
           }, {
             loader: 'postcss-loader',
             options: {
@@ -66,4 +82,4 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin(),
     new CleanWebpackPlugin(['assets'])
   ]
-};
+}

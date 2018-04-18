@@ -1,6 +1,7 @@
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
 @import "functions";
+@import "icon";
 
 /* 全局样式
 /* ---------------------------------------------------------- */
@@ -235,6 +236,10 @@ body {
   border-radius: 50%;
   transition: all 0.3s;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 2px 0px -2px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 /* 订阅
@@ -263,5 +268,52 @@ body {
 
   .newsletter-form {
     margin-top: 16px;
+  }
+}
+
+/* footer
+/* ---------------------------------------------------------- */
+.site-footer {
+  font-size: 14px;
+  position: relative;
+  margin-top: 40px;
+  background-color: #222;
+  color: #fff;
+}
+
+.footer-wrapper {
+  position: relative;
+  padding: 48px 0 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+  .widget {
+    h2 {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      margin-right: 8px;
+    }
+  }
+}
+
+.footer-bottom {
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.65);
+
+  .content {
+    padding: 16px 0;
+    text-align: center;
+  }
+
+  .divider {
+    margin: 0 0.5em;
   }
 }
