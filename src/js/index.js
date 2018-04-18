@@ -43,6 +43,7 @@ $(function ($) {
   }
   new SmoothScroll('#backTop')
   $(window).scroll(throttle(doAfterScroll, 200))
+  doAfterScroll()
 
   const hideNewsletter = localStorage.getItem('newsletterHide')
   if (hideNewsletter) {
