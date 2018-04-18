@@ -9,11 +9,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+a {
+  transition: color .3s ease;
+}
+
 /* 页面顶部背景
 /* ---------------------------------------------------------- */
 .cover {
   text-align: center;
-  color: #ffffff;
+  color: $white;
   background: center/cover;
 
   .container {
@@ -72,7 +76,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 20px 40px;
-  background: #fff center center;
+  background: $white center center;
   background-size: cover;
   border-radius: 5px;
   box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06), 1px 3px 8px rgba(39, 44, 49, 0.03);
@@ -91,7 +95,7 @@ body {
     .image {
       width: auto;
       height: 200px;
-      background: $lightgrey no-repeat center center;
+      background: $gray-400 no-repeat center center;
       background-size: cover;
     }
   }
@@ -107,18 +111,18 @@ body {
     position: relative;
     display: block;
     padding: 25px 25px 0;
-    color: $darkgrey;
+    color: $dark;
 
     &:hover {
       text-decoration: none;
-      color: $darkgrey;
+      color: $dark;
     }
   }
 
   .tags {
     display: block;
     margin-bottom: 4px;
-    color: $midgrey;
+    color: $gray-700;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -236,7 +240,7 @@ body {
   border-radius: 50%;
   transition: all 0.3s;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 2px 0px -2px rgba(0, 0, 0, 0.2);
-  color: #fff;
+  color: $white;
   &:hover {
     text-decoration: none;
   }
@@ -277,16 +281,25 @@ body {
   font-size: 14px;
   position: relative;
   margin-top: 40px;
-  background-color: #222;
-  color: #fff;
+  background-color: $gray-900;
+  color: $white;
+
+  a {
+    color: $white;
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
 }
 
 .footer-wrapper {
   position: relative;
   padding: 48px 0 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid $gray-600;
 
   .widget {
+    margin-bottom: 32px;
     h2 {
       font-size: 18px;
       margin-bottom: 16px;
@@ -299,14 +312,35 @@ body {
     list-style: none;
     li {
       display: inline-block;
-      margin-right: 8px;
+      margin-right: 16px;
+      .iconfont {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .tag-item {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    border-radius: 4px;
+    padding: 0 8px;
+    background: $gray-800;
+    font-size: 12px;
+    line-height: 24px;
+    height: 24px;
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+
+    &:hover {
+      color: $white;
+      opacity: .85;
     }
   }
 }
 
 .footer-bottom {
   line-height: 24px;
-  color: rgba(255, 255, 255, 0.65);
+  color: $gray-600;
 
   .content {
     padding: 16px 0;
@@ -315,5 +349,12 @@ body {
 
   .divider {
     margin: 0 0.5em;
+  }
+}
+
+.grow-rotate {
+  transition: transform .3s;
+  &:active, &:hover, &:focus {
+    transform: scale(1.2) rotate(5deg);
   }
 }
