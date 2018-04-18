@@ -194,20 +194,29 @@ body {
 /* ---------------------------------------------------------- */
 .post-pagination {
   position: relative;
-  padding: 0 20px;
   text-align: center;
   color: $primary;
 
   .newer-posts {
-    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 
   .older-posts {
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
   a:hover {
     text-decoration: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .post-pagination .page-number {
+    display: none;
   }
 }
 
