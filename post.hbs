@@ -1,1 +1,37 @@
 {{!< default}}
+
+{{#post}}
+  <main>
+    <article class="article">
+      <header class="container article-meta-header">
+        <div class="article-author">
+          {{#author}}
+            {{#if profile_image}}
+              <a class="avatar" href="{{url}}">
+                <img class="avatar-image" src="{{profile_image}}" alt="{{name}}" />
+              </a>
+            {{/if}}
+            <div class="info">
+              <p class="name"><a href="{{url}}">{{name}}</a></p>
+              <p class="caption">{{bio}}</p>
+              <p class="caption">{{website}}</p>
+              <p class="caption">{{location}}</p>
+            </div>
+          {{/author}}
+        </div>
+      </header>
+      <section class="article-content">
+        {{#if feature_image}}
+          <div class="article-content-outer">
+            <figure>
+              <img class="article-image" src="{{feature_image}}" alt="">
+            </figure>
+          </div>
+        {{/if}}
+        <div class="article-content-inner">
+
+        </div>
+      </section>
+    </article>
+  </main>
+{{/post}}

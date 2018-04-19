@@ -13,21 +13,27 @@ a {
   transition: color .3s ease;
 }
 
+.avatar-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
 /* 页面顶部背景
 /* ---------------------------------------------------------- */
 .cover {
   text-align: center;
   color: $white;
-  background: center/cover;
+  background: $primary center/cover;
 
   .container {
     padding: px2rem(150px) px2rem(60px);
   }
 
-  .avatar {
-    max-height: 144px;
+  .avatar-image {
+    width: 144px;
+    height: 144px;
     margin-bottom: 2rem;
-    border-radius: 50%;
   }
 
   .title {
@@ -357,4 +363,61 @@ a {
   &:active, &:hover, &:focus {
     transform: scale(1.2) rotate(5deg);
   }
+}
+
+/* post
+/* ---------------------------------------------------------- */
+.article-meta-header {
+  padding-top: 35px;
+  max-width: 740px !important;
+}
+
+.article-author {
+  display: flex;
+  align-items: center;
+  .avatar {
+    flex: 0 0 auto;
+  }
+  .info {
+    flex: 1 1 auto;
+    padding-left: 15px;
+    > p {
+      margin: 0;
+    }
+  }
+  .name {
+    > a {
+      color: rgba(0, 0, 0, .84);
+    }
+  }
+  .caption {
+    font-size: 14px;
+    color: rgba(0, 0, 0, .54);
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.article-content {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.article-content-outer {
+  max-width: 1000px;
+  width: 100%;
+  margin: 52px auto 0;
+}
+
+.article-content-inner {
+  width: 100%;
+  margin: 52px auto 0;
+  max-width: 740px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.article-image {
+  width: 100%;
+  max-height: 600px;
 }
