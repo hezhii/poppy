@@ -2,9 +2,9 @@
 
 {{#post}}
   <main>
-    <article class="article">
-      <header class="container article-meta-header">
-        <div class="article-author">
+    <article class="post">
+      <header class="container post-meta-header">
+        <div class="post-author">
           {{#author}}
             {{#if profile_image}}
               <a class="avatar" href="{{url}}">
@@ -20,18 +20,20 @@
           {{/author}}
         </div>
       </header>
-      <section class="article-content">
-        {{#if feature_image}}
-          <div class="article-content-outer">
-            <figure>
-              <img class="article-image" src="{{feature_image}}" alt="">
-            </figure>
-          </div>
-        {{/if}}
-        <div class="article-content-inner">
-
+      {{#if feature_image}}
+        <div class="post-outer">
+          <figure>
+            <img class="post-image" src="{{feature_image}}" alt="">
+          </figure>
         </div>
-      </section>
+      {{/if}}
+      <div class="post-inner">
+        <h1 class="post-title">{{title}}</h1>
+        <time class="post-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY年MM月DD日"}}</time>
+        <section class="post-content">
+          {{content}}
+        </section>
+      </div>
     </article>
   </main>
 {{/post}}

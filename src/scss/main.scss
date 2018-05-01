@@ -367,12 +367,12 @@ a {
 
 /* post
 /* ---------------------------------------------------------- */
-.article-meta-header {
+.post-meta-header {
   padding-top: 35px;
   max-width: 740px !important;
 }
 
-.article-author {
+.post-author {
   display: flex;
   align-items: center;
   .avatar {
@@ -398,18 +398,13 @@ a {
   }
 }
 
-.article-content {
-  word-break: break-all;
-  word-wrap: break-word;
-}
-
-.article-content-outer {
+.post-outer {
   max-width: 1000px;
   width: 100%;
   margin: 52px auto 0;
 }
 
-.article-content-inner {
+.post-inner {
   width: 100%;
   margin: 52px auto 0;
   max-width: 740px;
@@ -417,7 +412,13 @@ a {
   padding-right: 20px;
 }
 
-.article-image {
+.post-image {
   width: 100%;
   max-height: 600px;
+}
+
+.post-title {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
 }
