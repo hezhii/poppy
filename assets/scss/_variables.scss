@@ -1,0 +1,66 @@
+// Variables
+
+// Colors
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$red: #f5222d !default;
+$volcano: #fa541c !default;
+$orange: #fa8c16 !default;
+$gold: #faad14 !default;
+$yellow: #fadb14 !default;
+$lime: #a0d911 !default;
+$green: #52c41a !default;
+$cyan: #13c2c2 !default;
+$blue: #1890ff !default;
+$indigo: #2f54eb !default;
+$purple: #722ed1 !default;
+$magenta: #eb2f96 !default;
+
+$primary: $volcano !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: $white !default;
+$body-color: $gray-900 !default;
+
+// Font
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$code-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
+
+$font-size-base: 1.4rem !default; // 14px
+$font-size-lg: 1.6rem !default;
+$font-size-sm: 1.2rem !default;
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+
+// Spacing
+
+$space-xl: 4.8rem;
+$space-lg: 2.4rem;
+$space-md: 1.6rem;
+$space-sm: 1.2rem;
+$space-xs: 0.8rem;
+
+// Links
+
+$link-color: $primary !default;
+$link-decoration: none !default;
+$link-hover-color: lighten($link-color, 15%) !default;
+$link-hover-decoration: none !default;
