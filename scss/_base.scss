@@ -49,30 +49,12 @@ h1 {
   font-size: 4rem;
 }
 
-@media (max-width: 500px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-}
-
 h2 {
   font-size: 2rem;
 }
 
-@media (max-width: 500px) {
-  h2 {
-    font-size: 1.8rem;
-  }
-}
-
 h3 {
   font-size: 1.8rem;
-}
-
-@media (max-width: 500px) {
-  h3 {
-    font-size: 1.7rem;
-  }
 }
 
 h4 {
@@ -81,6 +63,20 @@ h4 {
 
 h5, h6 {
   font-size: 1.4rem;
+}
+
+@include media-breakpoint-down('xs') {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+  }
 }
 
 // Paragraphs
@@ -99,7 +95,7 @@ a {
   transition: color .3s;
   -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
 
-  &:hover {
+  @include hover {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
   }

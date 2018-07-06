@@ -7,13 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="HandheldFriendly" content="True"/>
   <title>{{meta_title}}</title>
-  <link rel="stylesheet" type="text/css" href="{{asset "built/poppy.min.css"}}"/>
+  <link rel="stylesheet" type="text/css" href="{{asset "poppy.min.css"}}"/>
   {{ghost_head}}
 </head>
 <body class="{{body_class}}">
 <div class="site-wrapper">
+  {{> header}}
   {{{body}}}
 </div>
+<script src="{{asset "poppy.min.js"}}"></script>
 {{ghost_foot}}
 </body>
 </html>

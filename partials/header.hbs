@@ -1,0 +1,17 @@
+<header class="site-header">
+  <nav class="c-navbar">
+    <a href="/" class="c-navbar__brand">
+      {{#if @blog.logo}}
+        <img src="{{@blog.logo}}" alt="logo" height="35">
+      {{/if}}
+    </a>
+    <button id="navbarTogglerBtn" class="c-navbar__toggler hamburger hamburger--collapse" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+       </span>
+    </button>
+    <div id="navbarCollapse" class="c-navbar__collapse">
+      {{navigation}}
+    </div>
+  </nav>
+</header>

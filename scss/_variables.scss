@@ -28,6 +28,9 @@ $purple: #722ed1 !default;
 $magenta: #eb2f96 !default;
 
 $primary: $volcano !default;
+$secondary: $gray-600 !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
 
 // Body
 //
@@ -64,3 +67,13 @@ $link-color: $primary !default;
 $link-decoration: none !default;
 $link-hover-color: lighten($link-color, 15%) !default;
 $link-hover-decoration: none !default;
+
+// Breakpoints
+
+$breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
