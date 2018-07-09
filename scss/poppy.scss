@@ -1,5 +1,135 @@
 @import "variables";
 @import "mixins";
 @import "reset";
+@import "hamburgers";
 @import "base";
-@import "header";
+
+/* 1. Site Header
+/* ---------------------------------------------------------- */
+
+.site-header {
+  padding: $space-md $space-md $space-xl;
+}
+
+.c-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.c-navbar__brand {
+  padding: $space-xs 0;
+  & img {
+    vertical-align: top;
+  }
+}
+
+.c-navbar__toggler {
+  display: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.c-navbar__collapse {
+  overflow: hidden;
+  transition: max-height .5s;
+
+  &.show {
+    max-height: 200px;
+  }
+}
+
+.c-navbar__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c-navbar__item.active .c-navbar__link {
+  color: $primary;
+}
+
+.c-navbar__link {
+  display: block;
+  padding: $space-xs $space-md;
+  font-size: 1.6rem;
+  color: $gray-10;
+
+  @include hover-focus {
+    color: $primary;
+  }
+}
+
+@include media-breakpoint-down('md') {
+  .c-navbar__toggler {
+    display: block;
+  }
+
+  .c-navbar__collapse {
+    flex-basis: 100%;
+    max-height: 0;
+  }
+
+  .c-navbar__list {
+    flex-direction: column;
+  }
+
+  .c-navbar__link {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* 2. Layout
+/* ---------------------------------------------------------- */
+
+.site-main {
+  padding: 0 $space-md;
+}
+
+.site-main-inner {
+  margin: 0 auto;
+  max-width: 740px;
+}
+
+/* 3. Banner
+/* ---------------------------------------------------------- */
+
+.home-title {
+  font-size: 40px;
+  margin-bottom: .2em;
+}
+
+.home-description {
+  font-size: 18px;
+  color: $text-color-secondary;
+  margin-bottom: 2.4em;
+}
+
+// tag cloud
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 4px 12px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  border-radius: 12px;
+  font-size: $font-size-sm;
+  font-weight: 600;
+}
+
+@for $i from 1 to length($tag-colors)+1 {
+  $tag-color: nth($tag-colors, $i);
+  .tag:nth-child(#{$i}) {
+    color: $tag-color;
+    background: rgba($tag-color, 0.2);
+  }
+}
