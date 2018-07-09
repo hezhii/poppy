@@ -17,6 +17,7 @@ gulp.task('sass', () => {
     .pipe(sourcemaps.init())
     .pipe(autoprefixer({
       browsers: [
+        '>1%',
         'last 2 versions',
       ],
     }))
