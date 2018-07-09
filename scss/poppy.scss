@@ -124,6 +124,11 @@
   border-radius: 12px;
   font-size: $font-size-sm;
   font-weight: 600;
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 @for $i from 1 to length($tag-colors)+1 {
