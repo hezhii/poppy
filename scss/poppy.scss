@@ -253,7 +253,7 @@
     }
 
     & p {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
 
     & .post-card__content-link {
@@ -263,5 +263,31 @@
     & .post-card__meta {
       padding: 0 40px 30px;
     }
+  }
+}
+
+/* 文章分页
+/* ---------------------------------------------------------- */
+.post-pagination {
+  position: relative;
+  text-align: center;
+  color: $primary;
+
+  .newer-posts {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .older-posts {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .post-pagination .page-number {
+    display: none;
   }
 }
