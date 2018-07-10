@@ -10,8 +10,8 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const plumber = require('gulp-plumber');
 
-const SASS_DIR = 'scss/*.scss';
-const JS_DIR = 'js/*.js';
+const SASS_DIR = 'src/sass/*.scss';
+const JS_DIR = 'src/js/*.js';
 
 gulp.task('sass', () => {
   return gulp.src(SASS_DIR)
@@ -29,7 +29,7 @@ gulp.task('sass', () => {
       suffix: '.min',
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('assets'))
+    .pipe(gulp.dest('assets/css'))
     .pipe(livereload());
 });
 
@@ -51,7 +51,7 @@ gulp.task('js', () => {
 
 gulp.task('build', ['sass', 'js']);
 
-gulp.task('zip', ['build'], () => {
+gulp.task('zip', ['build', 'copy'], () => {
   const themeName = require('./package.json').name;
   const filename = themeName + '.zip';
 
@@ -64,7 +64,12 @@ gulp.task('zip', ['build'], () => {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['build'], () => {
+gulp.task('copy', () => {
+  return gulp.src(['src/img*/**', 'src/font*/**'])
+    .pipe(gulp.dest('assets'));
+});
+
+gulp.task('default', ['build', 'copy'], () => {
   livereload.listen();
   gulp.watch([SASS_DIR, JS_DIR], ['build']);
 });
