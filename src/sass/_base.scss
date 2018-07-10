@@ -66,3 +66,17 @@ a {
     text-decoration: $link-hover-decoration;
   }
 }
+
+// Input
+
+.input-affix-wrapper {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+
+  .input-prefix {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

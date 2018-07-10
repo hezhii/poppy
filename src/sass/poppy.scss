@@ -333,12 +333,17 @@
   .form-group {
     flex: 1 1 300px;
   }
+
+  .icon {
+    color: white;
+    font-size: 20px;
+  }
 }
 
 .newsletter-button {
   padding: 10px 20px;
   font-weight: 500;
-  margin: 8px 0;
+  margin: 16px 0;
   background: white;
   color: $primary;
   border: none;
@@ -353,7 +358,7 @@
 .newsletter-input {
   width: 100%;
   border-radius: 4px;
-  padding: 7px 0;
+  padding: 7px 0 7px 30px;
   background: transparent;
   color: white;
   border: none;

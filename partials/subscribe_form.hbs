@@ -1,0 +1,18 @@
+<form method="post" action="{{action}}" class="{{form_class}}">
+  {{! This is required for the form to work correctly }}
+  {{hidden}}
+
+  <div class="form-group{{#if error}} error{{/if}}">
+    <span class="input-affix-wrapper">
+       <span class="input-prefix"><i class="icon icon-mail"></i></span>
+      {{input_email class=input_class placeholder=placeholder value=email autofocus=autofocus}}
+    </span>
+  </div>
+  <button class="{{button_class}}" type="submit">订阅</button>
+  {{! This is used to get extra info about where this subscriber came from }}
+  {{script}}
+</form>
+
+{{#if error}}
+  <p class="main-error">{{{error.message}}}</p>
+{{/if}}
