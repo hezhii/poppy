@@ -8,12 +8,14 @@ const livereload = require('gulp-livereload');
 const zip = require('gulp-zip');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
+const plumber = require('gulp-plumber');
 
 const SASS_DIR = 'scss/*.scss';
 const JS_DIR = 'js/*.js';
 
 gulp.task('sass', () => {
   return gulp.src(SASS_DIR)
+    .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(autoprefixer({
       browsers: [
@@ -21,8 +23,7 @@ gulp.task('sass', () => {
         'last 2 versions',
       ],
     }))
-    .pipe(sass()
-      .on('error', sass.logError))
+    .pipe(sass())
     .pipe(cssnano())
     .pipe(rename({
       suffix: '.min',
@@ -34,6 +35,7 @@ gulp.task('sass', () => {
 
 gulp.task('js', () => {
   return gulp.src(JS_DIR)
+    .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(babel({
       presets: ['env'],

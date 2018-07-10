@@ -87,11 +87,11 @@
 /* 2. Layout
 /* ---------------------------------------------------------- */
 
-.site-main {
+.outer {
   padding: 0 $space-md;
 }
 
-.site-main-inner {
+.inner {
   margin: 0 auto;
   max-width: 1040px;
 }
@@ -139,7 +139,7 @@
   }
 }
 
-/* 3. Post list
+/* 4. Post list
 /* ---------------------------------------------------------- */
 
 .post-feed {
