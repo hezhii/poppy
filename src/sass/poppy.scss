@@ -293,7 +293,7 @@
   }
 }
 
-/* 5. Newsletter
+/* 6. Newsletter
 /* ---------------------------------------------------------- */
 
 .newsletter {
@@ -385,5 +385,28 @@
 
   .newsletter-button {
     border-radius: 8px;
+  }
+}
+
+/* 7. Back to top button
+/* ---------------------------------------------------------- */
+
+#backTop {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 42px;
+  height: 42px;
+  background: $primary;
+  border-radius: 50%;
+  transition: all 0.3s;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 2px 0px -2px rgba(0, 0, 0, 0.2);
+
+  .icon {
+    font-size: 20px;
+    color: white;
   }
 }

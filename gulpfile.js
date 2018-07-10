@@ -65,7 +65,7 @@ gulp.task('zip', ['build', 'copy'], () => {
 });
 
 gulp.task('copy', () => {
-  return gulp.src(['src/img*/**', 'src/font*/**'])
+  return gulp.src(['src/img*/**', 'src/font*/**', 'src/lib*/**'])
     .pipe(gulp.dest('assets'));
 });
 
