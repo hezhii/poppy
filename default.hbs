@@ -14,6 +14,24 @@
 <div class="site-wrapper">
   {{> header}}
   {{{body}}}
+
+  {{#if @labs.subscribers}}
+    <div class="outer">
+      <div class="inner">
+        <section class="newsletter">
+          <div class="newsletter-divider"></div>
+          <h2>订阅{{@blog.title}}</h2>
+          <p>每周将最新的博客动态发送到您的邮箱</p>
+          {{subscribe_form
+              form_class="newsletter-form"
+              button_class="newsletter-button"
+              input_class="newsletter-input"
+              placeholder="请在此输入您的邮箱地址"
+          }}
+        </section>
+      </div>
+    </div>
+  {{/if}}
 </div>
 <script src="{{asset "poppy.min.js"}}"></script>
 {{ghost_foot}}
