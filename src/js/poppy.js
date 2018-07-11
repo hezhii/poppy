@@ -9,15 +9,24 @@
 
   // Back to Top
   const backTopBnt = document.getElementById('backTop');
-  window.onscroll = throttle(() => {
-    const top = document.documentElement.scrollTop;
+  const doAfterScroll = () => {
+    const top = document.documentElement.scrollTop || document.body.scrollTop;
     if (top > 0) {
       backTopBnt.style.display = 'flex';
     } else {
       backTopBnt.style.display = 'none';
     }
-  }, 200);
-  new SmoothScroll('#backTop');
+  };
+  window.onscroll = throttle(doAfterScroll, 200);
+
+  backTopBnt.addEventListener('click', function() {
+    animatedScrollTo(
+      document.documentElement || document.body,
+      0,
+      500,
+    );
+  });
+  doAfterScroll();
 })();
 
 function throttle(fn, delay) {
