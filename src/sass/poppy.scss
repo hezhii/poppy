@@ -314,15 +314,6 @@
   }
 }
 
-.newsletter-divider {
-  display: inline-block;
-  margin-bottom: $space-md;
-  width: 100px;
-  height: 3px;
-  border-radius: 1px;
-  background: linear-gradient(to right, $gray-1 0%, $gray-5 100%);
-}
-
 .newsletter-form {
   position: relative;
   display: flex;
