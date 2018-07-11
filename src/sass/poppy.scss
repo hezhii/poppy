@@ -94,7 +94,11 @@
 
 .inner {
   margin: 0 auto;
-  max-width: 1040px;
+  max-width: 1170px;
+}
+
+.site-main {
+  padding-bottom: $space-xl;
 }
 
 /* 3. Banner
@@ -107,7 +111,7 @@
 
 .home-description {
   font-size: 18px;
-  color: $text-color-secondary;
+  color: $text-color-light;
   margin-bottom: 2.4em;
 }
 
@@ -273,6 +277,7 @@
   position: relative;
   text-align: center;
   color: $primary;
+  padding: $space-md 0;
 
   .newer-posts {
     position: absolute;
@@ -297,7 +302,7 @@
 /* ---------------------------------------------------------- */
 
 .newsletter {
-  margin-top: $space-xl;
+  padding-bottom: $space-xl;
   text-align: center;
 
   h2 {
@@ -409,4 +414,150 @@
     font-size: 20px;
     color: white;
   }
+}
+
+/* 8. Footer
+/* ---------------------------------------------------------- */
+
+.site-footer {
+  background: $gray-3;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 64px 16px 72px;
+}
+
+.footer-widget {
+  flex: 1 0 350px;
+  padding: 0 8px;
+  margin-bottom: 28px;
+  color: $text-color-secondary;
+
+  h3 {
+    margin-bottom: 32px;
+    font-weight: 500;
+  }
+}
+
+// Recent post
+
+.recent-post {
+  display: flex;
+  margin-bottom: $space-md;
+}
+
+.recent-post__image-link {
+  display: block;
+  flex: 0 0 70px;
+
+  &:hover {
+    .recent-post__image {
+      opacity: .8;
+    }
+  }
+}
+
+.recent-post__image {
+  width: 100%;
+  height: 100%;
+  background: no-repeat center/cover;
+  transition: all .3s;
+}
+
+.recent-post__content {
+  padding-left: 16px;
+  overflow: hidden;
+
+  p {
+    font-size: 12px;
+  }
+
+  .icon {
+    margin-right: 3px;
+    font-size: 12px;
+  }
+}
+
+.recent-post__title {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: $text-color;
+
+  @include hover-focus {
+    color: $primary;
+  }
+}
+
+// Link hover underline
+
+.underline {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 2px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 90%;
+    height: 1px;
+    background: $primary;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  &:hover:before {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Social link
+
+.social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+    margin-right: 24px;
+  }
+
+  a {
+    color: $text-color-secondary;
+    &:hover {
+      color: $primary
+    }
+  }
+
+  .icon {
+    font-size: 32px;
+  }
+}
+
+.grow-rotate {
+  transition: transform .3s;
+  @include hover-focus-active {
+    transform: scale(1.2) rotate(5deg);
+  }
+}
+
+// Bottom bar
+
+.bottom-bar {
+  font-size: 16px;
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid $gray-4;
 }
