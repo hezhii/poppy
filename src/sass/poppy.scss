@@ -302,7 +302,6 @@
 /* ---------------------------------------------------------- */
 
 .newsletter {
-  padding-bottom: $space-xl;
   text-align: center;
 
   h2 {
@@ -325,6 +324,7 @@
 }
 
 .newsletter-form {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -334,6 +334,7 @@
   background: linear-gradient(to bottom right, $volcano 0%, $gold 100%);
   font-size: 16px;
   border-radius: 8px;
+  box-shadow: 0 25px 50px -24px rgba(0, 0, 0, 0.4);
 
   .form-group {
     flex: 1 1 300px;
@@ -421,6 +422,16 @@
 
 .site-footer {
   background: $gray-3;
+
+  &.arc {
+    margin-top: -30px;
+    border-top-left-radius: 50% 50px;
+    border-top-right-radius: 50% 50px;
+
+    .footer-wrapper {
+      padding-top: 112px;
+    }
+  }
 }
 
 .footer-wrapper {
