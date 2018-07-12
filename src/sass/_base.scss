@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: .5em;
   color: $text-color-dark;
-  font-weight: $font-weight-base;
+  font-weight: 500;
 }
 
 // Paragraphs
@@ -80,4 +80,40 @@ a {
     top: 50%;
     transform: translateY(-50%);
   }
+}
+
+figure {
+  margin: 0;
+}
+
+code, kbd, pre, samp {
+  font-family: $code-family;
+}
+
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: $red;
+  background-color: lighten($red, 42%);
+  border-radius: 4px
+}
+
+kbd {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: white;
+  background-color: #333;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25)
+}
+
+kbd kbd {
+  padding: 0;
+  font-size: 100%;
+  box-shadow: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }

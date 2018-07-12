@@ -83,6 +83,11 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  .site-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 /* 2. Layout
@@ -99,6 +104,24 @@
 
 .site-main {
   padding-bottom: $space-xl;
+}
+
+.outset-column {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+
+  & + .inset-column {
+    margin-top: $space-lg;
+  }
+}
+
+.inset-column {
+  max-width: 740px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* 3. Banner
@@ -306,7 +329,6 @@
 
   h2 {
     font-size: 24px;
-    font-weight: 500;
   }
 
   p {
@@ -440,7 +462,6 @@
 
   h3 {
     margin-bottom: 32px;
-    font-weight: 500;
   }
 }
 
@@ -562,4 +583,209 @@
   padding: 16px;
   text-align: center;
   border-top: 1px solid $gray-4;
+}
+
+/* 9. Single Post
+/* ---------------------------------------------------------- */
+
+.post-full {
+  word-break: break-word;
+}
+
+.post-full__image {
+  width: 100%;
+}
+
+.post-full__header {
+  padding-bottom: $space-md*2;
+}
+
+.post-full__title {
+  font-size: 32px;
+  font-weight: $font-weight-bold;
+  margin-bottom: $space-xs;
+}
+
+.post-full__meta {
+  color: $text-color-light;
+}
+
+.post-full__content {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+// Markdown style.
+
+.post-full__content {
+  h1 {
+    font-size: 2em;
+    line-height: 1.75em;
+  }
+
+  h2 {
+    font-size: 1.75em;
+    line-height: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.25em;
+  }
+
+  h4 {
+    font-size: 1.25em;
+    line-height: 1em;
+  }
+
+  h5 {
+    font-size: 1em;
+    line-height: 0.86em;
+  }
+
+  h6 {
+    font-size: 0.86em;
+    line-height: 0.75em;
+  }
+
+  h1, h2, h3 {
+    margin: 1.4em 0 0;
+  }
+
+  h4, h5, p, ul, ol, pre, blockquote, table {
+    margin: 1.2em 0;
+  }
+
+  h1, h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+
+  h1, h2, h3, h4, p, ul, ol, pre, blockquote {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  ul, ol {
+    margin-left: 2.8em;
+    padding-left: 0;
+    li {
+      margin: .3em 0;
+    }
+
+    ul, ol {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  p > p:empty, div > p:empty, p > div:empty, div > br:only-child, p + br, img + br {
+    display: none;
+  }
+
+  img, video, audio {
+    position: static !important;
+    max-width: 100%
+  }
+
+  img {
+    padding: 3px;
+    border: 1px solid $gray-5;
+  }
+
+  blockquote {
+    border-left: 3px solid $volcano;
+    padding-left: 5px;
+    background: $gray-3;
+    color: $gray-8;
+    font-size: 1em;
+  }
+
+  pre, code {
+    font-size: 0.93em;
+  }
+
+  pre {
+    padding: 1em;
+    border: none;
+    overflow: auto;
+    line-height: 1.45;
+    max-height: 35em;
+    position: relative;
+    background: $gray-3;
+
+    code {
+      color: inherit;
+      background: none;
+      font-size: 1em;
+      overflow-wrap: normal;
+      white-space: inherit;
+    }
+  }
+
+  hr {
+    margin: 1.5em auto;
+    border-top: 2px dotted $gray-4;
+  }
+
+  kbd {
+    margin: 0 4px;
+    padding: 3px 4px;
+    background: $gray-4;
+    color: $gray-8;
+  }
+
+  table {
+    width: 100%;
+    th, td {
+      border: 1px solid $gray-4;
+      padding: 5px 8px;
+      word-break: normal
+    }
+    th {
+      background: $gray-3
+    }
+  }
+
+  a {
+    padding-bottom: 1px;
+    border-bottom: 1px solid rgba($primary, .25);
+
+    &:hover {
+      border-bottom-color: rgba($primary, .6);
+    }
+  }
+
+  // Footnotes
+
+  .footnotes-list {
+    margin-left: 1.2em;
+  }
+
+  .footnote-backref, .footnote-ref a {
+    border-bottom: none;
+  }
+}
+
+.post-full__footer {
+  padding-top: $space-lg;
+
+  .statement {
+    text-align: center;
+    color: $text-color-secondary;
+    margin: 8px 0;
+
+    a {
+      display: block;
+    }
+  }
 }
