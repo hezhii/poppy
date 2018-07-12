@@ -336,6 +336,15 @@
   }
 }
 
+.newsletter-divider {
+  display: inline-block;
+  margin-bottom: $space-md;
+  width: 100px;
+  height: 3px;
+  border-radius: 1px;
+  background: linear-gradient(to right, $gray-1 0%, $gray-5 100%);
+}
+
 .newsletter-form {
   position: relative;
   display: flex;
@@ -588,6 +597,12 @@
 /* 9. Single Post
 /* ---------------------------------------------------------- */
 
+.post-template {
+  .site-main {
+    padding-bottom: $space-lg;
+  }
+}
+
 .post-full {
   word-break: break-word;
 }
@@ -786,6 +801,33 @@
 
     a {
       display: block;
+    }
+  }
+}
+
+.article-related {
+  padding: 20px 0;
+  border-top: 1px solid $gray-4;
+
+  h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    padding: 0 0 0 25px;
+
+    li {
+      margin-bottom: 3px;
+      line-height: 28px;
+      list-style: disc;
+
+      a {
+        font-weight: bold;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

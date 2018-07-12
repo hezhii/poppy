@@ -40,6 +40,21 @@
       </footer>
     </article>
   </main>
+
+  {{#if primary_tag}}
+    {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
+      {{#if related_posts}}
+        <aside class="article-related inset-column">
+          <h4>你可能感兴趣的内容</h4>
+          <ul>
+            {{#foreach related_posts}}
+              <li><a href="{{url}}">{{title}}</a></li>
+            {{/foreach}}
+          </ul>
+        </aside>
+      {{/if}}
+    {{/get}}
+  {{/if}}
 {{/post}}
 
 <script src="{{asset "lib/prism/prism.min.js"}}"></script>
