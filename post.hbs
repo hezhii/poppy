@@ -8,7 +8,8 @@
       <header class="post-full__header inset-column">
         <h1 class="post-full__title">{{title}}</h1>
         <div class="post-full__meta">
-          <span>编辑于{{date updated_at format="YYYY年MM月DD日"}}</span>
+          <span><i class="icon icon-calendar"></i>编辑于{{date updated_at format="YYYY年MM月DD日"}}</span>
+          <span><i class="icon icon-message"></i><a href="{{url absolute="true"}}#disqus_thread"></a></span>
         </div>
       </header>
       <div class="outset-column">
@@ -55,6 +56,24 @@
       {{/if}}
     {{/get}}
   {{/if}}
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = "{{url absolute="true"}}";
+      this.page.identifier = "ghost-{{comment_id}}";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://whezh.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+
 {{/post}}
 
 <script src="{{asset "lib/prism/prism.min.js"}}"></script>
+<script id="dsq-count-scr" src="//whezh.disqus.com/count.js" async></script>

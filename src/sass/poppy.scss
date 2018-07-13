@@ -120,8 +120,8 @@
   max-width: 740px;
   width: 100%;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: $space-md;
+  padding-right: $space-md;
 }
 
 /* 3. Banner
@@ -623,6 +623,22 @@
 
 .post-full__meta {
   color: $text-color-light;
+
+  .icon {
+    font-size: 14px;
+    margin-right: 3px;
+  }
+
+  > span {
+    margin-right: $space-sm;
+  }
+
+  a {
+    color: $text-color-light;
+    &:hover {
+      color: $primary
+    }
+  }
 }
 
 .post-full__content {
@@ -806,12 +822,12 @@
 }
 
 .article-related {
-  padding: 20px 0;
+  padding: $space-md;
   border-top: 1px solid $gray-4;
 
   h4 {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: $space-md;
   }
 
   ul {
@@ -830,4 +846,12 @@
       }
     }
   }
+}
+
+/* 10. Comment
+/* ---------------------------------------------------------- */
+
+#disqus_thread {
+  margin: 0 auto $space-lg;
+  max-width: 740px;
 }
