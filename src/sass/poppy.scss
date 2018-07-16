@@ -10,6 +10,11 @@
 
 .site-header {
   padding: $space-md $space-md $space-xl;
+
+  .c-navbar {
+    margin: auto;
+    max-width: 1300px;
+  }
 }
 
 .c-navbar {
