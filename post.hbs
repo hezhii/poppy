@@ -13,13 +13,12 @@
         </div>
       </header>
       <div class="outset-column">
-        <figure>
-          {{#if feature_image}}
-            <img class="post-full__image" src="{{feature_image}}">
-          {{else}}
-            <img class="post-full__image" src="{{asset "/img/default_background.png"}}">
-          {{/if}}
-        </figure>
+        {{#if feature_image}}
+          <figure class="post-full__image" style="background-image: url({{feature_image}})"></figure>
+        {{else}}
+          <figure class="post-full__image"
+                  style="background-image: url({{asset "/img/default_background.png"}})"></figure>
+        {{/if}}
       </div>
       <section class="post-full__content inset-column">
         {{content}}
