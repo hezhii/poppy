@@ -741,10 +741,6 @@
     font-size: 1em;
   }
 
-  pre, code {
-    font-size: 0.93em;
-  }
-
   pre {
     padding: 1em;
     border: none;
@@ -755,9 +751,10 @@
     background: $gray-3;
 
     code {
+      font-size: 1em;
+      padding: 0;
       color: inherit;
       background: none;
-      font-size: 1em;
       overflow-wrap: normal;
       white-space: inherit;
     }
