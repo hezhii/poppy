@@ -19,9 +19,13 @@
   };
   window.onscroll = throttle(doAfterScroll, 200);
 
+  const userAgent = navigator.userAgent;
+  const scrollElement = userAgent.indexOf('Firefox') > -1 || userAgent.indexOf('Chrome') > -1 ?
+    document.documentElement :
+    document.body;
   backTopBnt.addEventListener('click', function() {
     animatedScrollTo(
-      document.documentElement || document.body,
+      scrollElement,
       0,
       500,
     );
