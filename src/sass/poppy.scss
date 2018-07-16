@@ -13,7 +13,7 @@
 
   .c-navbar {
     margin: auto;
-    max-width: 1300px;
+    max-width: 1200px;
   }
 }
 
@@ -104,7 +104,7 @@
 
 .inner {
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 1040px;
 }
 
 .site-main {
@@ -185,8 +185,8 @@
 .post-card {
   display: flex;
   flex-direction: column;
-  flex: 1 1 320px;
-  margin: 0 16px 40px;
+  flex: 1 1 300px;
+  margin: 0 20px 40px;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
@@ -469,7 +469,7 @@
 }
 
 .footer-widget {
-  flex: 1 0 350px;
+  flex: 1 0 300px;
   padding: 0 8px;
   margin-bottom: 28px;
   color: $text-color-secondary;
