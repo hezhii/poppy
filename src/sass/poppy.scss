@@ -614,9 +614,21 @@
 
 .post-full__image {
   height: 540px;
-  background: $primary 50%;
+  background: $gray-3 50%;
   background-size: cover;
   border-radius: 5px;
+}
+
+@include media-breakpoint-down('md') {
+  .post-full__image {
+    height: 480px;
+  }
+}
+
+@include media-breakpoint-down('sm') {
+  .post-full__image {
+    height: 360px;
+  }
 }
 
 .post-full__header {
