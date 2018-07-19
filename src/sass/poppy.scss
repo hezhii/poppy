@@ -207,7 +207,7 @@
 .post-card__image {
   width: auto;
   height: 200px;
-  background: linear-gradient(to bottom right, #f6d365 0%, #fda085 100%) no-repeat center center;
+  background: $gray-3 no-repeat center center;
   background-size: cover;
 }
 
@@ -358,7 +358,7 @@
   align-items: center;
   margin-top: $space-xl;
   padding: 36px;
-  background: linear-gradient(to bottom right, $volcano 0%, $gold 100%);
+  background: linear-gradient(to bottom right, darken($primary, 20%) 0%, $primary 100%);
   font-size: 16px;
   border-radius: 8px;
   box-shadow: 0 25px 50px -24px rgba(0, 0, 0, 0.4);
@@ -754,7 +754,7 @@
   }
 
   blockquote {
-    border-left: 3px solid $volcano;
+    border-left: 3px solid $primary;
     padding-left: 5px;
     background: $gray-3;
     color: $gray-8;
