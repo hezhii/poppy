@@ -9,7 +9,7 @@
 /* ---------------------------------------------------------- */
 
 .site-header {
-  padding: $space-md $space-md $space-xl;
+  padding: $space-md $space-md $space-md*4;
 
   .c-navbar {
     margin: auto;
@@ -90,8 +90,8 @@
   }
 
   .site-header {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
