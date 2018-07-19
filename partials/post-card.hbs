@@ -19,13 +19,14 @@
       </section>
     </a>
     <footer class="post-card__meta">
-      {{#if author.profile_image}}
-        <img class="author-avatar" src="{{author.profile_image}}" alt="{{author.name}}"/>
-      {{/if}}
-      <span class="author-name">
-        <a href="{{author.url}}">{{author.name}}</a> ·
-        {{date updated_at timeago="true"}}
-      </span>
+      <div class="post-card__author">
+        {{#primary_author}}
+          {{#if profile_image}}
+            <img class="avatar" src="{{profile_image}}" alt="{{name}}"/>
+          {{/if}}
+          <a href="{{url}}">{{name}}</a>
+        {{/primary_author}}
+      </div>
       <span class="reading-time">{{reading_time}}</span>
     </footer>
   </div>

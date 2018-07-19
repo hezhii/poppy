@@ -246,17 +246,22 @@
   color: $gray-8;
   padding: 0 25px 25px;
 
-  .author-avatar {
-    margin-right: 5px;
+  .reading-time {
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+.post-card__author {
+  display: flex;
+  align-items: center;
+
+  .avatar {
+    margin-right: $space-xs;
     width: 25px;
     height: 25px;
     border-radius: 100%;
     object-fit: cover;
-  }
-
-  .reading-time {
-    font-weight: 500;
-    text-transform: uppercase;
   }
 }
 
