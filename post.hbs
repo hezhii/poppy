@@ -31,6 +31,10 @@
             {{/foreach}}
           </div>
         {{/if}}
+        <div class="reward">
+          <p>希望对您能有帮助，打赏随意</p>
+          <Button id="rewardBtn" class="btn">支持一下</Button>
+        </div>
         <div class="statement">
           <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
             <img src="{{asset "/img/creativecommons-cc.svg"}}" alt="creativecommons" height="30">
@@ -56,6 +60,24 @@
     {{/get}}
   {{/if}}
 
+  <div id="rewardOverlay">
+    <span id="closeReward"></span>
+    <div class="reward-overlay__content">
+      <h2 class="title">感谢您的支持</h2>
+      <p>非常感谢您对我的支持，支持我把博客做得更好，写出更多优质的内容，帮助更多的人。您的捐赠将会用于支付基础设施费用，提升网站质量。</p>
+      <div class="money-code-container">
+        <div class="money-code">
+          <span>支付宝</span>
+          <img src="{{asset "img/m_alipay.jpg"}}" width="200" alt="支付宝">
+        </div>
+        <div class="money-code">
+          <span>微信</span>
+          <img src="{{asset "img/m_wx.jpg"}}" width="200" alt="微信">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="disqus_thread" class="inset-column"></div>
   <script>
     var disqus_config = function() {
@@ -74,5 +96,17 @@
 
 {{/post}}
 
+<script>
+  // Toggle reward overlay
+  const rewardOverlay = document.getElementById('rewardOverlay');
+  const toggleRewardOverlay = function() {
+    rewardOverlay.classList.toggle('show');
+  };
+
+  document.getElementById('rewardBtn')
+      .addEventListener('click', toggleRewardOverlay);
+  document.getElementById('closeReward')
+      .addEventListener('click', toggleRewardOverlay);
+</script>
 <script src="{{asset "lib/prism/prism.min.js"}}"></script>
 <script id="dsq-count-scr" src="//whezh.disqus.com/count.js" async></script>

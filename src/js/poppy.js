@@ -23,7 +23,7 @@
   const scrollElement = userAgent.indexOf('Firefox') > -1 || userAgent.indexOf('Chrome') > -1 ?
     document.documentElement :
     document.body;
-  backTopBnt.addEventListener('click', function() {
+  backTopBnt.addEventListener('click', () => {
     animatedScrollTo(
       scrollElement,
       0,
@@ -36,7 +36,7 @@
 function throttle(fn, delay) {
   let timer = null;
   let preTime = Date.now();
-  return function() {
+  return () => {
     const cxt = this;
     const args = arguments;
     const curTime = Date.now();
@@ -49,7 +49,7 @@ function throttle(fn, delay) {
       fn.apply(cxt, args);
       preTime = curTime;
     } else {
-      timer = setTimeout(function() {
+      timer = setTimeout(() => {
         fn.apply(cxt, args);
       }, delay);
     }
