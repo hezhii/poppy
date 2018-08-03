@@ -1,5 +1,7 @@
 # Poppy
 
+English | [简体中文](./README.zh-CN.md)
+
 Beautiful and Enticing theme for Ghost, better support for Chinese. The design comes from [Casper](https://github.com/TryGhost/Casper) and [dribbble](https://dribbble.com/).
 
 &nbsp;
@@ -13,6 +15,7 @@ Beautiful and Enticing theme for Ghost, better support for Chinese. The design c
 - [x] Code syntax highlight
 - [x] Disqus support
 - [x] Subscribers support
+- [x] Donate support
 - [ ] Share support
 - [ ] Time axis
 - [ ] Search support
@@ -30,7 +33,7 @@ $ yarn install
 
 ### Development
 
-You should [install Ghost locally](https://docs.ghost.org/v1.0.0/docs/install-local) first, then link the poppy to the `content/themes`.
+You should [install Ghost locally](https://docs.ghost.org/v1.0.0/docs/install-local) first, then link the poppy to the `ghost/content/themes`.
 
 Start ghost:
 
