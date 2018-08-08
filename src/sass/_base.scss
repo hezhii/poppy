@@ -86,6 +86,21 @@ a {
   }
 }
 
+// Button
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  &:focus {
+    outline: none;
+  }
+}
+
 figure {
   margin: 0;
 }
