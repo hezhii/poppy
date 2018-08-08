@@ -35,11 +35,34 @@
           <p>希望对您能有帮助，打赏随意</p>
           <Button id="rewardBtn" class="btn">支持一下</Button>
         </div>
-        <div class="statement">
-          <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
-            <img src="{{asset "/img/creativecommons-cc.svg"}}" alt="creativecommons" height="30">
-          </a>
-          转载请注明出处
+        <div class="share">
+          <div class="statement">
+            <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
+              <img src="{{asset "/img/creativecommons-cc.svg"}}" alt="creativecommons" height="25">
+            </a>
+          </div>
+          <ul class="social share__social">
+            <li class="link">
+              <a href="https://service.weibo.com/share/share.php?title={{encode title}}&amp;url={{url absolute="true"}}"
+                 onclick="window.open(this.href, 'share-weibo','width=580,height=296');return false;">
+                <i class="icon icon-weibo"></i>
+              </a>
+            </li>
+            <li class="link"><a href="javascript:void(0);" id="wechatShareBtn"><i class="icon icon-wechat-fill"></i></a>
+            </li>
+            <li class="link">
+              <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                 onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+                <i class="icon icon-facebook-fill"></i>
+              </a>
+            </li>
+            <li class="link">
+              <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                 onclick="window.open(this.href, 'share-twitter','width=580,height=296');return false;">
+                <i class="icon icon-twitter"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </footer>
     </article>
@@ -60,9 +83,9 @@
     {{/get}}
   {{/if}}
 
-  <div id="rewardOverlay">
-    <span id="closeReward"></span>
-    <div class="reward-overlay__content">
+  <div id="rewardOverlay" class="modal">
+    <span id="closeReward" class="modal-close"></span>
+    <div class="reward-modal-content">
       <h2 class="title">感谢您的支持</h2>
       <p>非常感谢您对我的支持，支持我把博客做得更好，写出更多优质的内容，帮助更多的人。您的捐赠将会用于支付基础设施费用，提升网站质量。</p>
       <div class="money-code-container">
@@ -75,6 +98,13 @@
           <img src="{{asset "img/m_wx.jpg"}}" width="200" alt="微信">
         </div>
       </div>
+    </div>
+  </div>
+  <div id="wechatShare" class="modal">
+    <span id="closeWechatShare" class="modal-close"></span>
+    <div class="share-modal-content">
+      <p class="title">打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+      <canvas width="300" height="300" id="qrcodeCanvas"></canvas>
     </div>
   </div>
 
@@ -97,6 +127,7 @@
 {{/post}}
 
 <script src="{{asset "lib/highlight/highlight.min.js"}}"></script>
+<script src="{{asset "lib/qrcode.min.js"}}"></script>
 <script>
   hljs.initHighlightingOnLoad();
 
@@ -110,5 +141,30 @@
       .addEventListener('click', toggleRewardOverlay);
   document.getElementById('closeReward')
       .addEventListener('click', toggleRewardOverlay);
+
+  // wechat share
+  let done = false;
+
+  function generateQrcode(callback) {
+    if (!done) {
+      QRCode.toCanvas(document.getElementById('qrcodeCanvas'), window.location.href, { width: 300 }, function(error) {
+        if (error) console.error(error);
+        done = true;
+        callback && callback();
+      });
+    }
+    callback();
+  }
+
+  const wechatShare = document.getElementById('wechatShare');
+  const toggleWechatShare = function() {
+    wechatShare.classList.toggle('show');
+  };
+  document.getElementById('wechatShareBtn')
+      .addEventListener('click', function() {
+        generateQrcode(toggleWechatShare);
+      });
+  document.getElementById('closeWechatShare')
+      .addEventListener('click', toggleWechatShare);
 </script>
 <script id="dsq-count-scr" src="//whezh.disqus.com/count.js" async></script>

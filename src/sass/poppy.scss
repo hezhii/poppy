@@ -825,6 +825,44 @@
 .post-full__footer {
   padding-top: $space-lg;
 
+  .share {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+  }
+
+  .share__social {
+    li {
+      margin-right: 8px;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+
+    .icon {
+      font-size: 28px;
+    }
+
+    .icon-weibo {
+      color: $red;
+    }
+
+    .icon-wechat-fill {
+      color: $green;
+    }
+
+    .icon-facebook-fill {
+      color: darken($blue, 20%)
+    }
+
+    .icon-twitter {
+      color: $blue;
+    }
+  }
+
   .statement {
     text-align: center;
     color: $text-color-secondary;
@@ -833,6 +871,12 @@
     a {
       display: block;
     }
+  }
+}
+
+@include media-breakpoint-down('sm') {
+  .share__social {
+    visibility: hidden;
   }
 }
 
@@ -898,7 +942,7 @@
   }
 }
 
-#rewardOverlay {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -906,19 +950,17 @@
   right: 0;
   z-index: 9000;
   background: darken($primary, 45%);
-  transition: opacity .2s ease-in;
-  opacity: 0;
-  pointer-events: none;
   overflow-x: hidden;
   overflow-y: auto;
+  display: none;
+  opacity: .9;
 
   &.show {
-    opacity: .9;
-    pointer-events: auto;
+    display: block;
   }
 }
 
-#closeReward {
+.modal-close {
   position: absolute;
   top: 0;
   right: 0;
@@ -946,7 +988,7 @@
   }
 }
 
-.reward-overlay__content {
+.reward-modal-content {
   color: white;
   font-size: 18px;
   text-align: center;
@@ -987,5 +1029,18 @@
     img {
       border-color: $green;
     }
+  }
+}
+
+.share-modal-content {
+  width: 420px;
+  padding: 20px 0 40px;
+  margin: 50px auto;
+  border-radius: 5px;
+  background: white;
+  text-align: center;
+
+  .title {
+    color: $gray-7;
   }
 }
