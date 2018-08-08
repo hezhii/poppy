@@ -16,7 +16,7 @@ Beautiful and Enticing theme for Ghost, better support for Chinese. The design c
 - [x] Disqus support
 - [x] Subscribers support
 - [x] Donate support
-- [ ] Share support
+- [x] Share support
 - [ ] Time axis
 - [ ] Search support
 - [ ] Configurable

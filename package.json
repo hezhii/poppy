@@ -1,7 +1,7 @@
 {
   "name": "poppy",
   "description": "Beautiful and Enticing theme form Ghost.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "ghost": ">=1.2.0"
   },
