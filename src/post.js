@@ -33,17 +33,18 @@ document.getElementById('closeReward')
   .addEventListener('click', toggleRewardOverlay);
 
 // wechat share
-let done = false;
+let haveGenerated = false;
 
 function generateQrcode(callback) {
-  if (!done) {
+  if (haveGenerated) {
+    callback();
+  } else {
     QRCode.toCanvas(document.getElementById('qrcodeCanvas'), window.location.href, { width: 300 }, function(error) {
       if (error) console.error(error);
-      done = true;
+      haveGenerated = true;
       callback && callback();
     });
   }
-  callback();
 }
 
 const wechatShare = document.getElementById('wechatShare');
