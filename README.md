@@ -47,7 +47,7 @@ Then you can visit ghost at `http://localhost:2368`. You need to activate the po
 After that, from the theme's root directory:
 
 ```bash
-$ yan dev
+$ yarn dev
 ```
 
 Now you can edit `/src` files, which will be compiled to `/assets` automatically.
@@ -56,6 +56,7 @@ Now you can edit `/src` files, which will be compiled to `/assets` automatically
 
 ```bash
 $ cd poppy
+$ yarn build
 $ yarn zip
 ```
 

@@ -1,6 +1,6 @@
 {{!< default}}
 
-<link rel="stylesheet" type="text/css" href="{{asset "lib/highlight/default.min.css"}}"/>
+<link rel="stylesheet" type="text/css" href="{{asset "post.css"}}" />
 
 {{#post}}
   <main class="site-main">
@@ -109,62 +109,18 @@
   </div>
 
   <div id="disqus_thread" class="inset-column"></div>
-  <script>
-    var disqus_config = function() {
-      this.page.url = "{{url absolute="true"}}";
-      this.page.identifier = "ghost-{{comment_id}}";
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = 'https://whezh.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-    Disqus.</a></noscript>
-
 {{/post}}
-
-<script src="{{asset "lib/highlight/highlight.min.js"}}"></script>
-<script src="{{asset "lib/qrcode.min.js"}}"></script>
 <script>
-  hljs.initHighlightingOnLoad();
-
-  // Toggle reward overlay
-  const rewardOverlay = document.getElementById('rewardOverlay');
-  const toggleRewardOverlay = function() {
-    rewardOverlay.classList.toggle('show');
+  var disqus_config = function() {
+    this.page.url = "{{url absolute="true"}}";
+    this.page.identifier = "ghost-{{comment_id}}";
   };
-
-  document.getElementById('rewardBtn')
-      .addEventListener('click', toggleRewardOverlay);
-  document.getElementById('closeReward')
-      .addEventListener('click', toggleRewardOverlay);
-
-  // wechat share
-  let done = false;
-
-  function generateQrcode(callback) {
-    if (!done) {
-      QRCode.toCanvas(document.getElementById('qrcodeCanvas'), window.location.href, { width: 300 }, function(error) {
-        if (error) console.error(error);
-        done = true;
-        callback && callback();
-      });
-    }
-    callback();
-  }
-
-  const wechatShare = document.getElementById('wechatShare');
-  const toggleWechatShare = function() {
-    wechatShare.classList.toggle('show');
-  };
-  document.getElementById('wechatShareBtn')
-      .addEventListener('click', function() {
-        generateQrcode(toggleWechatShare);
-      });
-  document.getElementById('closeWechatShare')
-      .addEventListener('click', toggleWechatShare);
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://whezh.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
 </script>
 <script id="dsq-count-scr" src="//whezh.disqus.com/count.js" async></script>
+<script src="{{asset "post.js"}}"></script>
