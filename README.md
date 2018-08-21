@@ -57,7 +57,6 @@ Now you can edit `/src` files, which will be compiled to `/assets` automatically
 ```bash
 $ cd poppy
 $ yarn build
-$ yarn zip
 ```
 
 This command will packages the theme files into `dist/poppy.zip`, which you can then upload to your site.

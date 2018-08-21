@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "webpack --config build/webpack.dev.js --watch",
-    "build": "webpack --config build/webpack.prod.js"
+    "build": "gulp zip"
   },
   "license": "MIT",
   "author": {
@@ -49,6 +49,8 @@
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
     "file-loader": "^1.1.11",
+    "gulp": "^3.9.1",
+    "gulp-zip": "^4.2.0",
     "mini-css-extract-plugin": "^0.4.1",
     "node-sass": "^4.9.3",
     "optimize-css-assets-webpack-plugin": "^5.0.0",

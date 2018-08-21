@@ -57,7 +57,6 @@ $ yarn dev
 ```bash
 $ cd poppy
 $ yarn build
-$ yarn zip
 ```
 
 这个命令会把主题打包到 `dist/poppy.zip` 中，然后我们可以在 Ghost 后台直接上传压缩包以安装主题。
