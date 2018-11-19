@@ -5,9 +5,9 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="HandheldFriendly" content="True" />
+  <meta name="HandheldFriendly" content="True"/>
   <title>{{meta_title}}</title>
-  <link rel="stylesheet" type="text/css" href="{{asset "main.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "main.css"}}"/>
   {{ghost_head}}
 </head>
 <body class="{{body_class}}">
@@ -19,7 +19,9 @@
     <div class="outer">
       <div class="inner">
         <section class="newsletter">
-          <div class="newsletter-divider"></div>
+          <div class="newsletter-line-wrapper">
+            <div class="newsletter-line"></div>
+          </div>
           <h2>订阅{{@blog.title}}</h2>
           <p>每周将最新的博客动态发送到您的邮箱</p>
           {{subscribe_form

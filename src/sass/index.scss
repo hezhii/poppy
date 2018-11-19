@@ -346,13 +346,30 @@
   }
 }
 
-.newsletter-divider {
-  display: inline-block;
-  margin-bottom: $space-md;
-  width: 100px;
-  height: 3px;
-  border-radius: 1px;
-  background: linear-gradient(to right, $gray-1 0%, $gray-5 100%);
+.newsletter-line-wrapper {
+  height: 2px;
+  width: 312px;
+  margin: 0 auto 8px;
+  overflow: hidden;
+}
+
+.newsletter-line {
+  height: 100%;
+  width: 64px;
+  transform: translateX(-64px);
+  background: linear-gradient(to right, rgba(24, 144, 255, 0) 0%, $primary 100%);
+  animation: titleLine 3s ease-in-out 1.5s infinite;
+}
+
+@keyframes titleLine {
+  0%,
+  25% {
+    transform: translateX(-64px);
+  }
+  75%,
+  100% {
+    transform: translateX(376px);
+  }
 }
 
 .newsletter-form {
