@@ -28,7 +28,7 @@ Clone the repository and install dependencies.
 ```bash
 $ git clone https://github.com/hezhii/poppy.git
 $ cd poppy
-$ yarn install
+$ npm install
 ```
 
 ### Development
@@ -47,7 +47,7 @@ Then you can visit ghost at `http://localhost:2368`. You need to activate the po
 After that, from the theme's root directory:
 
 ```bash
-$ yarn dev
+$ npm run dev
 ```
 
 Now you can edit `/src` files, which will be compiled to `/assets` automatically.
@@ -56,7 +56,7 @@ Now you can edit `/src` files, which will be compiled to `/assets` automatically
 
 ```bash
 $ cd poppy
-$ yarn build
+$ npm run build
 ```
 
 This command will packages the theme files into `dist/poppy.zip`, which you can then upload to your site.
