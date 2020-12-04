@@ -65,7 +65,7 @@
   },
   "dependencies": {
     "animated-scrollto": "^1.1.0",
-    "highlight.js": "^9.12.0",
+    "highlight.js": "^10.4.1",
     "qrcode": "^1.2.2"
   }
 }
